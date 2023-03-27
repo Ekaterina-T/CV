@@ -1,0 +1,19 @@
+@import './reset.scss';
+@import './base.scss';
+@import './fonts.scss';
+
+#app {
+  max-width: 925px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+}
