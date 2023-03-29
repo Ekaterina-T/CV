@@ -22,5 +22,9 @@ export default defineConfig({
         additionalData: '@import "@/assets/styles/constants";'
       }
     }
+  },
+  base: process.env.NODE_ENV === 'production' ? '/CV/' : '/',
+  build: {
+    outDir: 'build',
   }
 })

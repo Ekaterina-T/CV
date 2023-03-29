@@ -12,9 +12,11 @@ export default {
     }
   },
   mounted(){
-    Object.keys(this).forEach(key => {
-      this[key] = data[key]
-    })
+    this.name = data.name
+    this.jobTitle = data.jobTitle
+    this.contactInfo = data.contactInfo
+    this.location = data.location
+    this.summary = data.summary
   }
 }
 </script>
