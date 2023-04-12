@@ -42,7 +42,8 @@ export default {
         font-family: "IBM Plex Mono", "Times New Roman", monospace;
     }
     &_subsection{
-      margin: 1.5rem 0 0.75rem 0;
+      margin: 1rem 0 0.5rem 0;
     }
 }
+
 </style>

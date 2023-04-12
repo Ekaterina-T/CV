@@ -6,7 +6,6 @@
   max-width: 925px;
   margin: 0 auto;
   padding: 2rem;
-
   font-weight: normal;
 }
 
@@ -15,5 +14,17 @@
   body {
     display: flex;
     place-items: center;
+  }
+}
+
+@media print {
+  #app {
+    padding: 0rem;
+    font-size: 12px;
+  }
+
+  @page {
+    margin: 0.5rem;
+    line-height: 1;
   }
 }

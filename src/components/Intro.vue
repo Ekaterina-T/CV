@@ -36,9 +36,12 @@ export default {
     <section class="summary">
       <h1 class="summary_header">{{ name }}</h1>
       <Box class="summary_body" title="Характеристика">
-        <span v-for="text, index in summary" :key="index">
+        <span
+          v-for="text, index in summary"
+          :key="index"
+          class="summary_line"
+        >
           {{ text }}
-          <br/><br/>
         </span>
       </Box>
     </section>
@@ -54,26 +57,36 @@ export default {
 }
 
 .contact-info {
-  width: 30%;
+  width: 50%;
   padding: 0.75rem 0;
   font-size: 1rem;
-}
-.contact-info_title {
-  font-size: 1.05rem;
-  font-weight: bold;
-}
-.contact-info_item {
-  display: block;
-}
-.contact-info_location {
-  margin-top: 1.5rem;
+
+  &_title {
+    font-size: 1.05rem;
+    font-weight: bold;
+  }
+  &_item {
+    display: block;
+    word-break: break-all;
+  }
+  &_location {
+    margin-top: 1.5rem;
+  }
 }
 
-.summary_header {
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.75rem;
-  font-size: 3.7rem;
-  font-weight: bold;
-  line-height: 3.7rem;
+
+.summary{
+  &_header {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.75rem;
+    font-size: 3.7rem;
+    font-weight: bold;
+    line-height: 3.7rem;
+  }
+  &_line {
+    display: block;
+    padding: 0.25rem 0;
+  }
 }
+
 </style>

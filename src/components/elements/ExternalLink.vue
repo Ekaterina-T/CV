@@ -21,6 +21,7 @@ export default {
 .link {
     display: block;
     cursor: pointer;
+    word-break: break-all;
 
     &:visited {
         color: rgb(0, 183, 255);

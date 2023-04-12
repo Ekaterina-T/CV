@@ -86,8 +86,8 @@ export default {
 }
 
 .column__right {
-  min-width: 70%;
-  width: 70%;
+  min-width: 65%;
+  width: 65%;
 }
 
 .column__left {
@@ -99,6 +99,13 @@ export default {
 .list {
   &_item{
     padding: 3px;
+  }
+}
+
+@media print {
+  .main {
+    column-gap: 0.5rem;
+    padding-top: 1rem;
   }
 }
 </style>

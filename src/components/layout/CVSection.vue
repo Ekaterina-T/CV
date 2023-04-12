@@ -25,7 +25,7 @@ export default {
   break-after: auto;
 
   &_title{
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-size: 1.75rem;
     font-weight: bold;
   }
