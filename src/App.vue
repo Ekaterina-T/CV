@@ -35,46 +35,47 @@ export default {
 </script>
 
 <template>
-  <Intro />
-
-  <main class="main">
-    <div class="column__right">
-      <EmploymentHistory />
-      <EducationHistory />
-    </div>
-    <aside class="column__left">
-      <Box title="Ссылки" class="list">
-        <ExternalLink
-          v-for="link in links"
-          :key="link.label"
-          v-bind="link"
-          class="list_item"
-        />
-      </Box>
-      <Box title="Навыки">
-        <ul class="list">
-          <li v-for="skill in skills" :key="skill" class="list_item">{{ skill }}</li>
-        </ul>
-      </Box>
-      <Box title="Языки">
-        <dl>
-          <ContentRow
-           v-for="lang in languages"
-           :key="lang.label"
-           :label="lang.label"
-           :value="lang.level"
-           :note="lang.note"
+  <main>
+    <Intro />
+    <div class="main">
+      <div class="column__right">
+        <EmploymentHistory />
+        <EducationHistory />
+      </div>
+      <aside class="column__left">
+        <Box title="Ссылки" class="list">
+          <ExternalLink
+            v-for="link in links"
+            :key="link.label"
+            v-bind="link"
+            class="list_item"
           />
-        </dl>
-      </Box>
-      <Box title="Курсы">
-        <Course
-          v-for="course,i in courses"
-          :key="i"
-          v-bind="course"
-        />
-      </Box>
-    </aside>
+        </Box>
+        <Box title="Навыки">
+          <ul class="list">
+            <li v-for="skill in skills" :key="skill" class="list_item">{{ skill }}</li>
+          </ul>
+        </Box>
+        <Box title="Языки">
+          <dl>
+            <ContentRow
+            v-for="lang in languages"
+            :key="lang.label"
+            :label="lang.label"
+            :value="lang.level"
+            :note="lang.note"
+            />
+          </dl>
+        </Box>
+        <Box title="Курсы">
+          <Course
+            v-for="course,i in courses"
+            :key="i"
+            v-bind="course"
+          />
+        </Box>
+      </aside>
+    </div>
   </main>
 </template>
 
