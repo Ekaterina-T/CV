@@ -28,7 +28,7 @@ export default {
       const format = 'DD/MM/YYYY HH:mm:ss'
       const [start, end] = this.period.map(el => moment(`01/${el} 00:00:00`, format, true))
       const duration  = new Duration(start, end.add(1, 'M'))
-      return `${this.period.join(' - ')}, ${duration.getHumanReadInterval()}`
+      return [this.period.join(' - '), duration.getHumanReadInterval()].filter(el => !!el).join(' ')
     },
     hasAchievements() {
       return this.description?.achievments.length > 0

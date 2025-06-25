@@ -67,7 +67,7 @@ export default {
             />
           </dl>
         </Box>
-        <Box title="Курсы">
+        <Box title="Курсы" v-if="courses.length">
           <Course
             v-for="course,i in courses"
             :key="i"
